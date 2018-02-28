@@ -28,8 +28,8 @@ $>./repeat_alpha "" | cat -e
 $
 $>
 -----------------------------------------------------------------------------*/
-#define upper 64
-#define low 96
+#define UPPER 64
+#define LOW 96
 #include <unistd.h>
 
 void ft_putchar(char temp) {
@@ -41,7 +41,7 @@ void repeat_letter(char let) {
 
     if (let >= 'A' && let <= 'Z')
     {
-        count = let - upper;
+        count = let - UPPER;
         while (count > 0)
         {
             ft_putchar(let);
@@ -50,7 +50,7 @@ void repeat_letter(char let) {
     }
     else if (let >= 'a' && let <= 'z')
     {
-        count = let - low;
+        count = let - LOW;
         while (count > 0) {
             ft_putchar(let);
             count--;
