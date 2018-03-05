@@ -36,9 +36,12 @@ char    *ft_strrev(char *str)
     return (str);
 }
 
-int     main(int argc, char **argv)
+int     main()
 {
-    if (argc == 2)
-        printf("The reverse string is : %s\n", ft_strrev(argv[1]));
+    char    str[5] = "hayo";;
+
+    // str = (char*)malloc(sizeof(char) * 5);
+    // if (argc == 2)
+    printf("The reverse string is : %s\n", ft_strrev(str));
     return (0);
 }
