@@ -29,7 +29,7 @@ int     ft_isdigit(int c)
         return (0);
 }
 
-int     ft_atoi(cosnt char *str)
+int     ft_atoi(const char *str)
 {
     unsigned long int   number;
     int                 i;
@@ -48,7 +48,7 @@ int     ft_atoi(cosnt char *str)
     {
         if ((number > 922337203685477580 ||
             (number == 922337203685477580 &&
-            (str[i] - '0') > 7)) && minus == -1)
+            (str[i] - '0') > 7)) && minus == 1)
             return (-1);
         else if ((number > 922337203685477580 ||
             (number == 922337203685477580 &&

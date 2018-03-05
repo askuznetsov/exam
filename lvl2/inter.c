@@ -25,8 +25,22 @@ $
 
 #include <unistd.h>
 
-void ft_putchar(char temp) {
+void    ft_putchar(char temp) {
     write (1, &temp, 1);
+}
+
+int     is_present(char *str, int count)
+{
+    int i;
+
+    i = 0;
+    while (i < count)
+    {
+        if (str[i] == str[count])
+            return (1);
+        i++;
+    }
+    return (0);
 }
 
 int     main(int argc, char **argv)
@@ -43,15 +57,18 @@ int     main(int argc, char **argv)
     }
     while (argv[1][i])
     {
-        j = 0;
-        while (argv[2][j])
+        if (is_present(argv[1], i) == 0)
         {
-            if (argv[1][i] == argv[2][j])
+            while (argv[2][j])
             {
-                ft_putchar(argv[1][i]);
-                break ;
+                if (argv[1][i] == argv[2][j])
+                {
+                    ft_putchar(argv[1][i]);
+                    break;
+                }
+                j++;
             }
-            j++;
+            j = 0;
         }
         i++;
     }
