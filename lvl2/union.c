@@ -65,7 +65,7 @@ void 	fill_array_with_zero(char *str, int len)
 	i = 0;
 	while (i < len)
 	{
-		str[i] = 0;
+		str[i] = '\0';
 		i++;
 	}
 }
